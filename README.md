@@ -1,7 +1,7 @@
 ## Continual learning technologies for tiny ML
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
-### Overleaf report - (read-only) link
+### Overleaf link
 Draft of the written report:
 https://www.overleaf.com/read/cxcxbjznmrxx
 
