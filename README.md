@@ -1,5 +1,9 @@
 ## Continual learning technologies for tiny ML
-Repository that contains all the reference material and the scripts developed for my Master thesis in Mechatronics Engineering at University of Trento, IT.
+Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
+
+### Overleaf report - (read-only) link
+Draft of the written report:
+https://www.overleaf.com/read/cxcxbjznmrxx
 
 ### Description: ###
 Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
@@ -15,5 +19,5 @@ Comprehensive research that compares the performance of different continuos lear
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
-For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these state-of-art algorithms. Ciao
+For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these state-of-art algorithms.
 ***
