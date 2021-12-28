@@ -19,6 +19,7 @@ For these reasons, to **further investigate whether an approach could be relevan
 
 ### Avalanche - end-to-end library for Continual Learning
 ref: https://avalanche.continualai.org
+
 Open-source end-to-end library for continual learning based on Pytorch, devised to ease the implementation, assessment and replication of continual learning algorithms across different settings.
 
 
