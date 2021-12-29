@@ -22,5 +22,12 @@ ref: https://avalanche.continualai.org
 
 Open-source end-to-end library for continual learning based on Pytorch, devised to ease the implementation, assessment and replication of continual learning algorithms across different settings.
 
+#### Reproducibility of continual learning frameworks
+ref: https://github.com/ContinualAI/reproducible-continual-learning
 
+
+The very first needed step of this thesis-project is to provide a set of experiments validating and reproducing existing works in continual learning.
+To guarantee fair implementations, I rely on the Avalanche library, developed and maintained by ContinualAI.
+
+The main aim is the use these experiments to better understand the specific configuration needed to achieve optimal results for resource constrained devices, which means in turn to play around with different hyper-parameters and such.
 ***
