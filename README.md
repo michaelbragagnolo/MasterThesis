@@ -30,6 +30,23 @@ Through the development of some simulated experiments, **the goal** is to better
 
 ### Action plan
 
-1. The very first needed step of this thesis-project is to provide a set of experiments validating and reproducing existing works in continual learning.
-To guarantee fair implementations, I rely on the Avalanche library, developed and maintained by ContinualAI.
+#### 1. EXPERIMENT  
+The very first step of this thesis-project is to **provide a set of experiments validating and reproducing existing works in continual learning.**
+To guarantee fair implementations, I rely on the `Avalanche` library, developed and maintained by ContinualAI.  
+> A critical design objective of Avalanche is in fact to allow experimental results to be seamlessly reproduced; continual learning algorithms today are often
+designed and implemented from scratch with different assumptions, settings, and benchmarks that make them difficult to compare among each other or even port to slightly different contexts.
+
+#### 2. EVALUATE  
+Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
+The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate experiments, in particular the ones of main interest for this project are:  
+&nbsp; - Accuracy  
+&nbsp; - Loss  
+&nbsp; - Catastrophic forgetting  
+&nbsp; - Confusion matrix  
+&nbsp; - Timing  
+&nbsp; - Ram / Disk / CPU / GPU usage  
+
+#### 3. LOG and DISPLAY RESULT
+Logging tools are essential for **monitoring the activity of an ongoing experiment.**  
+The `Logging` module of Avalanche is used to display each plugin metric during training and evaluation.
 ***
