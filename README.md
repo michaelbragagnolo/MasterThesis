@@ -1,11 +1,10 @@
 ## Continual learning technologies for tiny ML
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
-### Overleaf link
-Draft of the written report:
-https://www.overleaf.com/read/cxcxbjznmrxx
+### Overleaf project
+Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www.overleaf.com/read/cxcxbjznmrxx)
 
-### Description: ###
+### Description
 Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
 
 > Main references:
@@ -15,7 +14,7 @@ Comprehensive research that compares the performance of different continuos lear
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
-For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these state-of-art algorithms.
+For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these algorithms, inspired by the state of the art.
 
 ### Avalanche - end-to-end library for Continual Learning
 ref: https://avalanche.continualai.org
@@ -25,9 +24,12 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 #### Reproducibility of continual learning frameworks
 ref: https://github.com/ContinualAI/reproducible-continual-learning
 
+## Research objectives and methods
+This thesis contributes to the study of different Continual Learning algorithms, focused on continual supervised learning for vision tasks, that could best suit resource-constrained devices.  
+Through the development of some simulated experiments, **the goal** is to better understand the specific configuration needed to achieve optimal results in resource-constrained devices, which means in turn to play with different hyper-parameters and such.
 
-The very first needed step of this thesis-project is to provide a set of experiments validating and reproducing existing works in continual learning.
+### Action plan
+
+1. The very first needed step of this thesis-project is to provide a set of experiments validating and reproducing existing works in continual learning.
 To guarantee fair implementations, I rely on the Avalanche library, developed and maintained by ContinualAI.
-
-The main aim is the use these experiments to better understand the specific configuration needed to achieve optimal results for resource constrained devices, which means in turn to play around with different hyper-parameters and such.
 ***
