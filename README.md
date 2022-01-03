@@ -14,7 +14,7 @@ Comprehensive research that compares the performance of different continuos lear
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
-For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these algorithms, inspired by the state of the art.
+For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these state of the art algorithms.
 
 ### Avalanche - end-to-end library for Continual Learning
 ref: https://avalanche.continualai.org
@@ -35,6 +35,24 @@ The very first step of this thesis-project is to **provide a set of experiments 
 To guarantee fair implementations, I rely on the `Avalanche` library, developed and maintained by ContinualAI.  
 > A critical design objective of Avalanche is in fact to allow experimental results to be seamlessly reproduced; continual learning algorithms today are often
 designed and implemented from scratch with different assumptions, settings, and benchmarks that make them difficult to compare among each other or even port to slightly different contexts.
+
+**Continuous Learning strategies:**  
+Recently, a growing number of approaches have been presented on CL based on both variations of already existing and well known strategies or completely novel approaches with different degrees of success. Here I propose a list of experiments based on some of the most popular, yet interesting, CL techniques inspired by the state of the art.
+
+In order to improve its performance or expand its set of capabilities, the target system powered by a continual learning strategy is required to learn from a non-stationary stream of experiences . The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
+The benchmarks are so far based on reshaped versions of well-known datasets such as MNIST, CIFAR-10, CIFAR-100.
+
+Technique | Benchmark | Implemented (Y/N)           
+---|---------------------|-----
+Synaptic Intelligence | Split MNIST | N         
+Synaptic Intelligence | Permuted MNIST | N       
+CoPE | Split MNIST | N                      
+Elastic Weight Consolidation | Permuted MNIST | N       
+Average GEM | Permuted MNIST, Split CIFAR 100 | N      
+GEM | Permuted MNIST, Split CIFAR 100 | N              
+LwF | Split MNIST, Permuted MNIST | N       
+GSS | Split MNIST | N          
+iCaRL | Split CIFAR 100 | N      
 
 #### 2. EVALUATE  
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
