@@ -7,10 +7,12 @@ Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www
 ### Description
 Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
 
-> Main references:
-- Avalanche library for CL: https://arxiv.org/abs/2104.00405
-- Performance of CL for embedded sensing applications: https://arxiv.org/abs/2110.13290
-- Online CL in Image Classification: https://arxiv.org/abs/2101.10423
+Main references | link         
+---|---------------------
+Avalanche library for CL | https://arxiv.org/abs/2104.00405
+Performance of CL for embedded sensing applications | https://arxiv.org/abs/2110.13290
+Online CL in Image Classification | https://arxiv.org/abs/2101.10423
+CL in Single Incremental Task-Scenarios | https://arxiv.org/abs/1806.08568
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
