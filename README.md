@@ -44,8 +44,7 @@ The benchmarks are so far based on reshaped versions of well-known datasets such
 
 Technique | Benchmark | Implemented (Y/N)           
 ---|---------------------|-----
-Synaptic Intelligence | Split MNIST | N         
-Synaptic Intelligence | Permuted MNIST | N       
+Synaptic Intelligence | Split MNIST, Permuted MNIST | N       
 CoPE | Split MNIST | N                      
 Elastic Weight Consolidation | Permuted MNIST | N       
 Average GEM | Permuted MNIST, Split CIFAR 100 | N      
