@@ -42,8 +42,9 @@ designed and implemented from scratch with different assumptions, settings, and 
 Recently, a growing number of approaches have been presented on CL based on both variations of already existing and well known strategies or completely novel approaches with different degrees of success.  
 Here I propose a list of experiments based on some of the most popular, yet interesting, CL techniques inspired by the state of the art.
 
-In order to improve its performance or expand its set of capabilities, the target system powered by a continual learning strategy is required to learn from a non-stationary stream of experiences . The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
-The benchmarks are so far based on reshaped versions of well-known datasets such as MNIST, CIFAR-100.
+In order to improve its performance or expand its set of capabilities, the target system powered by a continual learning strategy is required to learn from a non-stationary stream of experiences.  
+The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
+Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST, CIFAR-100.
 
 Technique | Benchmark | Implemented (Y/N)           
 ---|---------------------|-----
