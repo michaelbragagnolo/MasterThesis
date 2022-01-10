@@ -25,7 +25,7 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 
 #### Reproducibility of continual learning frameworks
 ref: https://github.com/ContinualAI/reproducible-continual-learning
----
+***
 
 ## Research objectives and methods
 This thesis contributes to the study of different Continual Learning algorithms, focused on continual supervised learning for vision tasks, that could best suit resource-constrained devices.  
@@ -54,7 +54,7 @@ Elastic Weight Consolidation  | Permuted MNIST                   | https://arxiv
 iCaRL                         | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
 Synaptic Intelligence         | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1703.04200                                   | N
 CoPE                          | Split MNIST                      | https://arxiv.org/abs/2009.00919                                   | N                     
-GEM, Average GEM              | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
+GEM, Average-GEM              | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
 GSS                           | Split MNIST                      | https://arxiv.org/abs/1903.08671                                   | N
 Replay                        | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
      
@@ -71,4 +71,4 @@ The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate ex
 #### 3. LOG and DISPLAY RESULT
 Logging tools are essential for **monitoring the activity of an ongoing experiment.**  
 The `Logging` module of Avalanche is used to display each plugin metric during training and evaluation.
----
+
