@@ -22,6 +22,7 @@ For these reasons, to **further investigate whether an approach could be relevan
 ref: https://avalanche.continualai.org
 
 Open-source end-to-end library for continual learning based on Pytorch, devised to ease the implementation, assessment and replication of continual learning algorithms across different settings.
+![avalanche](avalanche_library.png)
 
 #### Reproducibility of continual learning frameworks
 ref: https://github.com/ContinualAI/reproducible-continual-learning
