@@ -47,16 +47,17 @@ In order to improve its performance or expand its set of capabilities, the targe
 The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
 Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and CIFAR-100.
 
-Technique | Benchmark | Implemented (Y/N)           
----|---------------------|-----
-LwF | Split MNIST, Permuted MNIST | N
-Elastic Weight Consolidation | Permuted MNIST | N 
+Technique | Benchmark                    | Resources      | Implemented           
+----------|------------------------------|----------------|----------
+LwF       | Split MNIST, Permuted MNIST  | https://arxiv.org/abs/1606.09282, https://arxiv.org/abs/1606.09282 | [x]
+Elastic Weight Consolidation | Permuted MNIST | - [x] Fatto
 iCaRL | Split CIFAR 100 | N 
 Synaptic Intelligence | Split MNIST, Permuted MNIST | N       
 CoPE | Split MNIST | N                      
 GEM | Permuted MNIST, Split CIFAR 100 | N      
 Average GEM | Permuted MNIST, Split CIFAR 100 | N      
-GSS | Split MNIST | N          
+GSS | Split MNIST | N
+Replay | MNIST | N
      
 
 #### 2. EVALUATE  
