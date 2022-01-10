@@ -8,12 +8,11 @@ Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www
 ### Description
 Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
 
-Main references | link         
----|---------------------
-Avalanche library for CL | https://arxiv.org/abs/2104.00405
-Performance of CL for embedded sensing applications | https://arxiv.org/abs/2110.13290
-Online CL in Image Classification | https://arxiv.org/abs/2101.10423
-CL in Single Incremental Task-Scenarios | https://arxiv.org/abs/1806.08568
+Main references                                             | link         
+------------------------------------------------------------|---------------------------------
+Avalanche library for CL                                    | https://arxiv.org/abs/2104.00405
+Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
+Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
@@ -26,6 +25,7 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 
 #### Reproducibility of continual learning frameworks
 ref: https://github.com/ContinualAI/reproducible-continual-learning
+---
 
 ## Research objectives and methods
 This thesis contributes to the study of different Continual Learning algorithms, focused on continual supervised learning for vision tasks, that could best suit resource-constrained devices.  
@@ -47,19 +47,17 @@ In order to improve its performance or expand its set of capabilities, the targe
 The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
 Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and CIFAR-100.
 
-Technique | Benchmark                    | Resources      | Implemented           
-----------|------------------------------|----------------|----------
-LwF       | Split MNIST, Permuted MNIST  | https://arxiv.org/abs/1606.09282, https://arxiv.org/abs/1606.09282 | [x]
-Elastic Weight Consolidation | Permuted MNIST | - [x] Fatto
-iCaRL | Split CIFAR 100 | N 
-Synaptic Intelligence | Split MNIST, Permuted MNIST | N       
-CoPE | Split MNIST | N                      
-GEM | Permuted MNIST, Split CIFAR 100 | N      
-Average GEM | Permuted MNIST, Split CIFAR 100 | N      
-GSS | Split MNIST | N
-Replay | MNIST | N
+Technique                     | Benchmark                        | Resources                                                          | Implemented  [Y/N]             
+------------------------------|----------------------------------|--------------------------------------------------------------------|---------------------------
+LwF                           | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
+Elastic Weight Consolidation  | Permuted MNIST                   | https://arxiv.org/abs/1612.00796                                   | N
+iCaRL                         | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
+Synaptic Intelligence         | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1703.04200                                   | N
+CoPE                          | Split MNIST                      | https://arxiv.org/abs/2009.00919                                   | N                     
+GEM, Average GEM              | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
+GSS                           | Split MNIST                      | https://arxiv.org/abs/1903.08671                                   | N
+Replay                        | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
      
-
 #### 2. EVALUATE  
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
 The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate experiments, in particular the ones of main interest for this project are:  
@@ -73,4 +71,4 @@ The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate ex
 #### 3. LOG and DISPLAY RESULT
 Logging tools are essential for **monitoring the activity of an ongoing experiment.**  
 The `Logging` module of Avalanche is used to display each plugin metric during training and evaluation.
-***
+---
