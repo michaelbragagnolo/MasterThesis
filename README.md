@@ -4,6 +4,7 @@ Repository that is intended to keep track of my thesis work and that contains al
 ### Overleaf project
 Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www.overleaf.com/read/cxcxbjznmrxx)
 
+
 ### Description
 Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
 
@@ -48,14 +49,15 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 
 Technique | Benchmark | Implemented (Y/N)           
 ---|---------------------|-----
+LwF | Split MNIST, Permuted MNIST | N
+Elastic Weight Consolidation | Permuted MNIST | N 
+iCaRL | Split CIFAR 100 | N 
 Synaptic Intelligence | Split MNIST, Permuted MNIST | N       
 CoPE | Split MNIST | N                      
-Elastic Weight Consolidation | Permuted MNIST | N       
+GEM | Permuted MNIST, Split CIFAR 100 | N      
 Average GEM | Permuted MNIST, Split CIFAR 100 | N      
-GEM | Permuted MNIST, Split CIFAR 100 | N              
-LwF | Split MNIST, Permuted MNIST | N       
 GSS | Split MNIST | N          
-iCaRL | Split CIFAR 100 | N      
+     
 
 #### 2. EVALUATE  
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
