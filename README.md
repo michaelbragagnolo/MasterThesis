@@ -1,101 +1,75 @@
-<div align="center">
-    
-# Reproducible Continual Learning
-**[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
+## Continual learning technologies for tiny ML
+Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
-</div>
-
-<p align="center">
-    <img src="https://www.dropbox.com/s/90thp7at72sh9tj/avalanche_logo_with_clai.png?raw=1"/>
-</p>
+### Overleaf project
+Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www.overleaf.com/read/cxcxbjznmrxx)
 
 
+### Description
+Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
 
-**The aim of this project is to provide to the continual learning community a set of experiments validating and
-reproducing existing works in continual learning.**
+Main references                                             | link         
+------------------------------------------------------------|---------------------------------
+Avalanche library for CL                                    | https://arxiv.org/abs/2104.00405
+Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
+Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
 
-You can use these experiments to better understand the specific configuration needed to achieve the results of a paper,
-or maybe to play around with different hyper-parameters and such. Sky is the limit!
+In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
-To guarantee fair implementations, we rely on the **[Avalanche](https://github.com/ContinualAI/avalanche)** library, developed and maintained by *[ContinualAI](https://www.continualai.org/)*.
-Feel free to check it out and support the project!
+For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these state of the art algorithms.
 
-## Coverage
-The table below describes all the experiments currently implemented.
+### Avalanche - end-to-end library for Continual Learning
+ref: https://avalanche.continualai.org
 
-The `Command` column refers to the console command needed to reproduce experiments
-from that strategy and benchmark. Please, remember to prepend `strategies.` to the command when executing it
-from the project root directory.
+Open-source end-to-end library for continual learning based on Pytorch, devised to ease the implementation, assessment and replication of continual learning algorithms across different settings.
+![avalanche](avalanche_library.png)
 
+#### Reproducibility of continual learning frameworks
+ref: https://github.com/ContinualAI/reproducible-continual-learning
+***
 
-Strategy | Benchmark           | Command (`strategies.`)          | Metrics 
----|---------------------|----------------------------------|---
-Synaptic Intelligence | Split MNIST         | SynapticIntelligence.test_smnist | Stream Accuracy
-Synaptic Intelligence | Permuted MNIST      | SynapticIntelligence.test_pmnist | Stream Accuracy
-CoPE | Split MNIST         | COPE.test_smnist                 | Stream Accuracy
-Deep Streaming LDA | CORe50              | DSLDA.test_core50                | Stream Accuracy
-Elastic Weight Consolidation | Permuted MNIST      | EWC.test_pmnist                  | Stream Accuracy
-Average GEM | Permuted MNIST      | AGEM.test_pmnist                 | Stream Accuracy
-Average GEM | Split CIFAR 100     | AGEM.test_scifar100              | Stream Accuracy
-GEM | Permuted MNIST      | GEM.test_pmnist                  | Stream Accuracy
-GEM | Split CIFAR 100     | GEM.test_scifar100               | Stream Accuracy
-GSS-greedy | Split MNIST         | GSS.test_smnist                  | Stream Accuracy
-LwF | Split MNIST         | LwF.test_smnist                  | Stream Accuracy
-LwF | Permuted MNIST      | LwF.test_pmnist                  | Stream Accuracy
-LwF | Split Tiny ImageNet | LwF.test_stinyimagenet           | Stream Accuracy
-GSS | Split MNIST         | GSS.test_smnist                  | Stream Accuracy
-iCaRL | Split CIFAR 100     | iCARL.test_scifar100             | Average Incremental Accuracy
-GDumb | Split MNIST         | GDumb.test_smnist                | Stream Accuracy
+## Research objectives and methods
+This thesis contributes to the study of different Continual Learning algorithms, focused on continual supervised learning for vision tasks, that could best suit resource-constrained devices.  
+Through the development of some simulated experiments, **the goal** is to better understand the specific configuration needed to achieve optimal results in resource-constrained devices, which means in turn to play with different hyper-parameters and such.
 
-The file `strategies/target_results.csv` lists the target metric value(s) for each experiment.
+### Action plan
 
-## Run custom experiments with Python (recommended)
-Experiments can be run with a python script by simply:
-1. Creating an instance of the strategy object
-2. Executing the strategy on a benchmark by running the related method of the strategy object
-3. Look at console output for details of ongoing experiment
+#### 1. EXPERIMENT  
+The very first step of this thesis-project is to **provide a set of experiments validating and reproducing existing works in continual learning.**
+To guarantee fair implementations, I rely on the `Avalanche` library, developed and maintained by ContinualAI.  
+> A critical design objective of Avalanche is in fact to allow experimental results to be seamlessly reproduced; continual learning algorithms today are often
+designed and implemented from scratch with different assumptions, settings, and benchmarks that make them difficult to compare among each other or even port to slightly different contexts.
 
-```python
-from strategies import SynapticIntelligence  # select the strategy
+**Continuous Learning strategies:**  
+Recently, a growing number of approaches have been presented on CL based on both variations of already existing and well known strategies or completely novel approaches with different degrees of success.  
+Here I propose a list of experiments based on some of the most popular, yet interesting, CL techniques inspired by the state of the art.
 
-s = SynapticIntelligence()  # create the strategy
+In order to improve its performance or expand its set of capabilities, the target system powered by a continual learning strategy is required to learn from a non-stationary stream of experiences.  
+The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
+Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and CIFAR-100.
 
-# run the experiment with custom parameters and without performing `assert` checks
-s.test_smnist({'learning_rate': 1e-3, 'si_lambda': 1,
-               'check': False})
-```
+Technique                     | Benchmark                        | Resources                                                          | Implemented  [Y/N]             
+------------------------------|----------------------------------|--------------------------------------------------------------------|---------------------------
+LwF                           | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
+Elastic Weight Consolidation  | Permuted MNIST                   | https://arxiv.org/abs/1612.00796                                   | N
+iCaRL                         | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
+Synaptic Intelligence         | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1703.04200                                   | N
+CoPE                          | Split MNIST                      | https://arxiv.org/abs/2009.00919                                   | N                     
+GEM, Average-GEM              | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
+GSS                           | Split MNIST                      | https://arxiv.org/abs/1903.08671                                   | N
+Replay                        | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
+     
+#### 2. EVALUATE  
+Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
+The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate experiments, in particular the ones of main interest for this project are:  
+&nbsp; - Accuracy  
+&nbsp; - Loss  
+&nbsp; - Catastrophic forgetting  
+&nbsp; - Confusion matrix  
+&nbsp; - Timing  
+&nbsp; - Ram / Disk / CPU / GPU usage  
 
-## Command line experiments
-You can run experiments directly through console with the default parameters.  
-Open the console and go to the project `reproducible-continual-learning` root folder.
+#### 3. LOG and DISPLAY RESULT
+Logging tools are essential for **monitoring the activity of an ongoing experiment.**  
+The `Logging` module of Avalanche is used to display each plugin metric during training and evaluation.
 
-Execute from console 
-```bash
-python -m unittest strategies.{strategy_class_name}.test_{benchmark}
-```
-to run experiment with default parameters.  
-For example
-```bash
-python -m unittest strategies.SynapticIntelligence.test_smnist
-```
-runs Synaptic Intelligence on Split MNIST.
-
-To execute experiment with custom parameters, please refer to the previous section.
-
-## Contribute
-We are always looking for new contributors willing to help us in the challenging mission of providing robust experiments
-to the community. Would you like to join us? The steps are easy!
-
-1. Take a look at the opened issues and find yours
-2. Fork this repo and write an experiment (see next section)
-3. Submit a PR and receive support from the maintainers
-4. Merge the PR, your contribution is now included in the project!
-
-### Write an experiment
-1. Create a folder with appropriate name (e.g., strategy name)
-2. Fill the `experiment.py` file with your code (one method per benchmark) and place it under the newly created directory
-3. Make the main class of your experiment visible from outside the folder (in `__init__.py` within your folder add `from .experiment import YourClassName`). Check if other `__init__` files need similar modifications.
-4. Add to `target_results.csv` the expected result for your experiment. You can add a number or a list of numbers.
-5. Update table in `README.md`.
-
-Check out one of the existing strategies to better understand the logic of the experiments.
