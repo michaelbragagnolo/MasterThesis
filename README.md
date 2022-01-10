@@ -1,3 +1,14 @@
+<div align="center">
+    
+# Reproducible Continual Learning
+**[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
+
+</div>
+
+<p align="center">
+    <img src="https://www.dropbox.com/s/90thp7at72sh9tj/avalanche_logo_with_clai.png?raw=1"/>
+</p>
+
 ## Continual learning technologies for tiny ML
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
