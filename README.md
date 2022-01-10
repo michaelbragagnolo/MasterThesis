@@ -1,15 +1,7 @@
 <div align="center">
     
-# Reproducible Continual Learning
-**[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
-
+# Continual Learning technologies for tiny ML
 </div>
-
-<p align="center">
-    <img src="https://www.dropbox.com/s/90thp7at72sh9tj/avalanche_logo_with_clai.png?raw=1"/>
-</p>
-
-## Continual learning technologies for tiny ML
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
 ### Overleaf project
@@ -30,9 +22,14 @@ In consequence of the *catastrophic forgetting* problem, enabling deep learning 
 For these reasons, to **further investigate whether an approach could be relevant to resource-constrained devices**, I'll start from the findings discussed in the aforementioned papers and, as main part of the work, try to complete a comprehensive survey and simulated comparison of these state of the art algorithms.
 
 ### Avalanche - end-to-end library for Continual Learning
-ref: https://avalanche.continualai.org
-
 Open-source end-to-end library for continual learning based on Pytorch, devised to ease the implementation, assessment and replication of continual learning algorithms across different settings.
+
+<div align="left">
+  
+**[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
+
+</div>
+
 ![avalanche](avalanche_library.png)
 
 #### Reproducibility of continual learning frameworks
