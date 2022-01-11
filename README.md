@@ -28,10 +28,11 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 <div align="center">
   
 **[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
-
+<img src="avalanche_library.png" alt="drawing" style="width:700px;"/>
 </div>
 
-![avalanche](avalanche_library.png)
+
+
 
 #### Reproducibility of continual learning frameworks
 ref: https://github.com/ContinualAI/reproducible-continual-learning
@@ -64,7 +65,7 @@ Elastic Weight Consolidation  | Permuted MNIST                   | https://arxiv
 iCaRL                         | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
 Synaptic Intelligence         | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1703.04200                                   | N
 CoPE                          | Split MNIST                      | https://arxiv.org/abs/2009.00919                                   | N                     
-GEM, Average-GEM              | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
+GEM                           | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
 GSS                           | Split MNIST                      | https://arxiv.org/abs/1903.08671                                   | N
 Replay                        | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
      
