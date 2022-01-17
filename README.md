@@ -85,4 +85,5 @@ Logging tools are essential for **monitoring the activity of an ongoing experime
 The `Logging` module of Avalanche is used to display each plugin metric during training and evaluation.
 
 #### 4. CONCLUSION
-On-device training is subject to many real world constraints, strict computational and memory limitations. In this thesis work, I want to show that a proper fine-tuned continual learning strategy can provide an efficient and effective approach for sustainable on-device personalization while controlling forgetting on previously acquired knowledge.
+On-device training is subject to many real world constraints, strict computational and memory limitations.  
+In this thesis work, I want to show that a proper fine-tuned continual learning strategy can provide an efficient and effective approach for sustainable on-device personalization while controlling forgetting on previously acquired knowledge.
