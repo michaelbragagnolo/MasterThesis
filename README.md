@@ -16,7 +16,7 @@ Main references                                             | link
 Avalanche library for CL                                    | https://arxiv.org/abs/2104.00405
 Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
 Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
-Continual Learning at the edge: Real-time training on Smartphone devices | https://arxiv.org/abs/2105.13127
+CL at the edge: Real-time training on Smartphone devices    | https://arxiv.org/abs/2105.13127
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
 
@@ -32,11 +32,6 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 <img src="avalanche_library.png" alt="drawing" style="width:700px;"/>
 </div>
 
-
-
-
-#### Reproducibility of continual learning frameworks
-ref: https://github.com/ContinualAI/reproducible-continual-learning
 ***
 
 ## Research objectives and methods
