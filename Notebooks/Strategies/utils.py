@@ -1,3 +1,7 @@
+## Michael Bragagnolo - University of Trento, IT ##
+
+##-- Utils module intended to ease the code for implementing the CL algorithms --##
+
 from types import SimpleNamespace
 #import strategies
 import os
