@@ -1,3 +1,7 @@
+## Michael Bragagnolo - University of Trento, IT ##
+
+##-- Definition of the NN models needed for testing different CL techniques  --##
+
 from torch import nn
 
 # Class used to define NN model
