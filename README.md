@@ -16,8 +16,10 @@ Main references                                             | link
 Avalanche library for CL                                    | https://arxiv.org/abs/2104.00405
 Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
 Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
-
+--                                                          | --
 Continual Learning for Robotics                             | https://arxiv.org/abs/1907.00182
+Benchmarking TinyML Systems: Challenges and Direction       | https://arxiv.org/abs/2003.04821
+
 
 
 In consequence of the *catastrophic forgetting* problem, enabling deep learning models to train continuously is extremely difficult in practice. Many approaches have been proposed but most of the existing CL techniques do not take into account the resource requirements, so it's unsure if they'd work in severly resource constrained devices, such as embedded systems.
