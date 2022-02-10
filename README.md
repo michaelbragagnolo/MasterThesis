@@ -17,6 +17,7 @@ Avalanche library for CL                                    | https://arxiv.org/
 Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
 Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
 --                                                          | --
+Continual Learning in Single-Incremental-Task scenarios     | https://arxiv.org/abs/1806.08568
 Continual Learning for Robotics                             | https://arxiv.org/abs/1907.00182
 Benchmarking TinyML Systems: Challenges and Direction       | https://arxiv.org/abs/2003.04821
 
