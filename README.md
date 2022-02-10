@@ -58,16 +58,14 @@ In order to improve its performance or expand its set of capabilities, the targe
 The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
 Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and CIFAR-100.
 
-Technique                     | Benchmark                        | Resources                                                          | Implemented  [Y/N]             
-------------------------------|----------------------------------|--------------------------------------------------------------------|---------------------------
-LwF                           | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
-Elastic Weight Consolidation  | Permuted MNIST                   | https://arxiv.org/abs/1612.00796                                   | N
-iCaRL                         | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
-Synaptic Intelligence         | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1703.04200                                   | N
-CoPE                          | Split MNIST                      | https://arxiv.org/abs/2009.00919                                   | N                     
-GEM                           | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N        
-GSS                           | Split MNIST                      | https://arxiv.org/abs/1903.08671                                   | N
-Replay                        | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
+CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
+----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
+Regularization  | LwF                               | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
+                | Synaptic Intelligence             | Split MNIST, Permuted MNIST      | https://arxiv.org/abs/1703.04200                                   | N
+Rehearsal       | GEM                               | Permuted MNIST, Split CIFAR 100  | https://arxiv.org/abs/1706.08840                                   | N    
+                | iCaRL                             | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
+Replay          | Rehearsal and generative replay   | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
+
      
 #### 2. EVALUATE  
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
