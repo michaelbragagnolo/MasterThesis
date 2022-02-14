@@ -21,7 +21,11 @@ Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www
 3. Continual Learning
    - Introductive framework for Continual Learning
    - Continual learning approaches for efficient ML
+     - Architectural
+     - Regularization
+     - Rehearsal
    - Continual learning benchmarks and protocols
+     - LwF 
 4. Software environment and experimental application
    - Algorithm selection
    - Simulated training on device (selection of algorithms described in 3.)
