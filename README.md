@@ -87,9 +87,9 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
 Regularization  | LwF                               | Split MNIST                      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
-Regularization  | Synaptic Intelligence             | Split MNIST                      | https://arxiv.org/abs/1703.04200                                   | N
-Rehearsal       | GEM                               | Split CIFAR 100                  | https://arxiv.org/abs/1706.08840                                   | N    
-Rehearsal       | iCaRL                             | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
+Architectural / Regularization  | AR1               | Split CIFAR 100                  | https://arxiv.org/abs/1806.08568                                   | N
+Rehearsal / Regularization      | GEM               | Split CIFAR 10                   | https://arxiv.org/abs/1706.08840                                   | N    
+Rehearsal / Regularization      | iCaRL             | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
 Replay          | Rehearsal and generative replay   | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
 
      
