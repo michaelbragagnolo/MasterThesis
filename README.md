@@ -24,11 +24,18 @@ Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www
      - Architectural
      - Regularization
      - Rehearsal
+     - Generative Replay
    - Continual learning benchmarks and protocols
-     - LwF 
+     - (Il motivare perchè questi algoritmi lo metterei già qua in cima..)
+     - LwF
+     - AR1
+     - GEM
+     - ICARL
+     - Replay  
 4. Software environment and experimental application
-   - Algorithm selection
-   - Simulated training on device (selection of algorithms described in 3.)
+   - (Avalanche library, brief overview)
+   - Algorithm selection (Descrizione degli script python di implementazione algoritmi)
+   - Simulated training on device (LOG e metriche di valutazione di ognuno), collegarsi al paper linkato sotto: Benchmarking TinyML...
 5. Results and comparison by selected algorithm
 6. Conclusion and future challenges
 
@@ -87,10 +94,10 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
 Regularization  | LwF                               | Split MNIST                      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
-Architectural / Regularization  | AR1               | Split CIFAR 100                  | https://arxiv.org/abs/1806.08568                                   | N
-Rehearsal / Regularization      | GEM               | Split CIFAR 10                   | https://arxiv.org/abs/1706.08840                                   | N    
-Rehearsal / Regularization      | iCaRL             | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
-Replay          | Rehearsal and generative replay   | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
+Architectural Regularization  | AR1                 | Split CIFAR 100                  | https://arxiv.org/abs/1806.08568                                   | N
+Rehearsal Regularization      | GEM                 | Split CIFAR 10                   | https://arxiv.org/abs/1706.08840                                   | N    
+Rehearsal Regularization      | iCaRL               | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
+Generative Replay             | Replay              | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
 
      
 #### 2. EVALUATE  
