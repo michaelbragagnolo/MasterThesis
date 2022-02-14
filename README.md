@@ -7,6 +7,27 @@ Repository that is intended to keep track of my thesis work and that contains al
 ### Overleaf project
 Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www.overleaf.com/read/cxcxbjznmrxx)
 
+### Outline
+1. Introduction
+   - Machine Learning: the good and bad
+   - Continual Learning
+   - Thesis outline and methods
+2. Background and Motivation
+   - Introduction on Artificial Intelligence
+   - Artificial Intelligence on embedded systems
+   - Machine Learning
+   - Tiny Machine Learning
+   - Motivation
+3. Continual Learning
+   - Introductive framework for Continual Learning
+   - Continual learning approaches for efficient ML
+   - Continual learning benchmarks and protocols
+4. Software environment and experimental application
+   - Algorithm selection
+   - Simulated training on device (selection of algorithms described in 3.)
+5. Results and comparison by selected algorithm
+6. Conclusion and future challenges
+
 
 ### Description
 Comprehensive research that compares the performance of different continuos learning algorithms on small images dataset for tinyML applications involving on-device, low-power image recognition and classification, and investigates (in a simulated scenario) the trade-offs between performance, storage, computational costs and memory footprint.
