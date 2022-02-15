@@ -99,7 +99,15 @@ Rehearsal Regularization      | GEM                 | Split CIFAR 10            
 Rehearsal Regularization      | iCaRL               | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
 Generative Replay             | Replay              | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
 
-     
+Venn diagram of the CL strategies w.r.t. the four most popular continual approaches.  
+Combining different strategies allows to find the best solutions to tackle catastrophic forgetting.
+
+<div align="center">
+  
+**[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
+<img src="VennDiagram.png" alt="drawing" style="width:700px;"/>
+</div>
+
 #### 2. EVALUATE  
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
 The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate experiments, in particular the ones of main interest for this project are:  
