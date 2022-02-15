@@ -103,9 +103,8 @@ Venn diagram of the CL strategies w.r.t. the four most popular continual approac
 Combining different strategies allows to find the best solutions to tackle catastrophic forgetting.
 
 <div align="center">
-  
-**[Avalanche Website](https://avalanche.continualai.org)** | **[Avalanche Repository](https://github.com/ContinualAI/avalanche)**
-<img src="VennDiagram.png" alt="drawing" style="width:700px;"/>
+
+<img src="VennDiagram.png" alt="drawing" style="width:500px;"/>
 </div>
 
 #### 2. EVALUATE  
