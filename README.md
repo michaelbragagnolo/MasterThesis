@@ -26,18 +26,18 @@ Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www
      - Rehearsal
      - Generative Replay
    - Continual learning benchmarks and protocols
-     - (Il motivare perchè questi algoritmi lo metterei già qua in cima..)
      - LwF
      - AR1
      - GEM
      - ICARL
      - Replay  
 4. Software environment and experimental application
-   - (Avalanche library, brief overview)
-   - Algorithm selection (Descrizione degli script python di implementazione algoritmi)
-   - Simulated training on device (LOG e metriche di valutazione di ognuno), collegarsi al paper linkato sotto: Benchmarking TinyML...
+   - Avalanche library, brief overview
+   - Description of the implemented algorithms in Jupyter Notebook
+   - Metrics of evaluation
 5. Results and comparison by selected algorithm
-6. Conclusion and future challenges
+   - LOG and Display of the results
+7. Conclusion and future challenges
 
 
 ### Description
