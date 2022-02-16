@@ -113,7 +113,7 @@ The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate ex
 &nbsp; - Loss  
 &nbsp; - Catastrophic forgetting  
 &nbsp; - Confusion matrix  
-&nbsp; - Timing  
+&nbsp; - Running times  
 &nbsp; - Ram / Disk / CPU / GPU usage  
 
 #### 3. LOG and DISPLAY RESULT
