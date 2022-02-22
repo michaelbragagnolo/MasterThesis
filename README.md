@@ -114,7 +114,11 @@ The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate ex
 &nbsp; - Catastrophic forgetting  
 &nbsp; - Confusion matrix  
 &nbsp; - Running times  
-&nbsp; - Ram / Disk / CPU / GPU usage  
+&nbsp; - Ram / Disk / CPU / GPU usage
+
+**Tensorboard** logs all the metrics in real-time; from terminal:  
+ tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
+ localhost http://localhost:6006
 
 #### 3. LOG and DISPLAY RESULT
 Logging tools are essential for **monitoring the activity of an ongoing experiment.**  
