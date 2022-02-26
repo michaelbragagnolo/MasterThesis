@@ -110,14 +110,14 @@ Combining different strategies allows to find the best solutions to tackle catas
 
 #### 2. EVALUATE  
 **This section aims at evaluating CL approaches in the context of resource-scarse embedded systems.**   
-Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation. Continual learning algorithms learn from a stream of data in a continuous and adaptable manner throughout time, allowing for the progressive development of ever more complicated knowledge and abilities. The lack of agreement in evaluating continuous learning algorithms, as well as the almost exclusive focus on forgetting, make it even more difficult to define a robust evaluation of CL strategies for embedded systems and robotics.
+Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.  
+Continual learning algorithms learn from a stream of data in a continuous and adaptable manner throughout time, allowing for the progressive development of ever more complicated knowledge and abilities. The lack of agreement in evaluating continuous learning algorithms, as well as the almost exclusive focus on forgetting, make it even more difficult to define a robust evaluation of CL strategies for embedded systems and robotics.
 
-The evaluation of those algorithms has to provide insights on whether their solutions may help continual learning in the context of resource-scarse devices. It is not enough to observe good final accuracy on an algorithm to know if it's transferable to embedded settings, but additional metrics have to be taken into account for it to suffice.  
-In this context, I propose a more **comprehensive set of implementation independent metrics** accounting for several factors I believe have practical implications worth considering in the deployment of real AI systems that learn continually:
+The evaluation of those algorithms has to provide insights on whether their solutions may help continual learning in the context of resource-scarse devices. It is not enough to observe good final accuracy on an algorithm to know if it's transferable to embedded settings, but additional metrics have to be taken into account for it to suffice. In this context, I propose a more **comprehensive set of implementation independent metrics** accounting for several factors I believe have practical implications worth considering in the deployment of real AI systems that learn continually:
 - Accuracy or Performance over time  
 - BWT: Backward knowledge transfer
 - FWT: Forward knowledge transfer 
-- Model size and Memory efficiency: space occupied by the model, increment in space required for each new experience 
+- Model size and Memory efficiency: space occupied by the model, increment required for each new experience 
 - Computational efficiency: computational overhead during training (running time, MACs, CPU time, ..) and inference.
 
 Drawing inspiration from the `Evaluation` module of Avalanche, that offers a vast set of metrics to evaluate experiments, I evaluate my proposal with five continual learning strategies on the MNIST and iCIFAR-100 continual learning benchmarks.
