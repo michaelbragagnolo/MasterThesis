@@ -120,7 +120,7 @@ The evaluation of those algorithms has to provide insights on whether their solu
 - Model size and Memory efficiency: space occupied by the model, increment in space required for each new experience 
 - Computational efficiency: computational overhead during training (running time, MACs, CPU time, ..) and inference.
 
-Drawing inspiration from the `Evaluation` module of Avalanche, that offers a vast set of metrics to evaluate experiments, I evaluate my proposal with five continual learning strategies on the MNIST and iCIFAR-100 continual learning benchmarks.
+Drawing inspiration from the `Evaluation` module of Avalanche, I evaluate my proposal with five continual learning strategies on the MNIST and iCIFAR-100 continual learning benchmarks.
 
 **Tensorboard** logs all the metrics in real-time; from terminal:  
 - tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
