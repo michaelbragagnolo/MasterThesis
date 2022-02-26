@@ -117,14 +117,14 @@ The evaluation of those algorithms has to provide insights on whether their solu
 - Accuracy or Performance over time  
 - BWT: Backward knowledge transfer
 - FWT: Forward knowledge transfer 
-- Model size and Memory efficiency: space occupied by the model, increment required for each new experience 
+- Model size and Memory efficiency: space occupied by the model, increment in space required for each new experience 
 - Computational efficiency: computational overhead during training (running time, MACs, CPU time, ..) and inference.
 
 Drawing inspiration from the `Evaluation` module of Avalanche, that offers a vast set of metrics to evaluate experiments, I evaluate my proposal with five continual learning strategies on the MNIST and iCIFAR-100 continual learning benchmarks.
 
 **Tensorboard** logs all the metrics in real-time; from terminal:  
- tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
- localhost http://localhost:6006
+- tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
+- localhost http://localhost:6006
 
 #### 3. LOG and DISPLAY RESULT
 Logging tools are essential for **monitoring the activity of an ongoing experiment.**  
