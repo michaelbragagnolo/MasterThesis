@@ -109,14 +109,17 @@ Combining different strategies allows to find the best solutions to tackle catas
 </div> 
 
 #### 2. EVALUATE  
-Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.**  
-The `Evaluation` module of Avalanche offers a vast set of metrics to evaluate experiments, in particular the ones of main interest for this project are:  
-&nbsp; - Accuracy  
-&nbsp; - Loss  
-&nbsp; - Catastrophic forgetting  
-&nbsp; - Confusion matrix  
-&nbsp; - Running times  
-&nbsp; - Ram / Disk / CPU / GPU usage
+Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each **Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.** This section aims at evaluating CL approaches in the context of resource-scarse embedded systems.  
+Continual learning algorithms learn from a stream of data in a continuous and adaptable manner throughout time, allowing for the progressive development of ever more complicated knowledge and abilities. The lack of agreement in evaluating continuous learning algorithms, as well as the almost exclusive focus on forgetting, make it even more difficult to define a robust evaluation of CL strategies for embedded systems and robotics.
+
+The evaluation of those algorithms has to provide insights on whether their solutions may help continual learning in the context of resource-scarse devices. It is not enough to observe good final accuracy on an algorithm to know if it's transferable to embedded settings, but additional metrics have to be taken into account for it to suffice. In this context, I propose a more **comprehensive set of implementation independent metrics** accounting for several factors I believe have practical implications worth considering in the deployment of real AI systems that learn continually:
+&nbsp; - Accuracy or Performance over time  
+&nbsp; - BWT: Backward knowledge transfer
+&nbsp; - FWT: Forward knowledge transfer 
+&nbsp; - Model size and Memory efficiency: space occupied by the model, increment in space required for each new experience 
+&nbsp; - Computational efficiency: computational overhead during training (running time, MACs, CPU time, ..) and inference.
+
+Drawing inspiration from the `Evaluation` module of Avalanche, that offers a vast set of metrics to evaluate experiments, I evaluate my proposal with five continual learning strategies on the MNIST and iCIFAR-100 continual learning benchmarks.
 
 **Tensorboard** logs all the metrics in real-time; from terminal:  
  tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
@@ -129,3 +132,5 @@ The `Logging` module of Avalanche is used to display each plugin metric during t
 #### 4. CONCLUSION
 On-device training is subject to many real world constraints, strict computational and memory limitations.  
 In this thesis work, I want to show that a proper fine-tuned continual learning strategy can provide an efficient and effective approach for sustainable on-device personalization while controlling forgetting on previously acquired knowledge.
+
+In future evaluation scenarios, particularly in resource-constrained devices, stability is another important property that should be evaluated since in many tasks, potential abrupt performance drifts would be a major concern when learning continuosly.
