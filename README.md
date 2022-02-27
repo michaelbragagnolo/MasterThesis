@@ -1,6 +1,6 @@
 <div align="center">
     
-# Continual Learning technologies for tiny ML
+# Continual Learning for resource-scarce devices
 </div>
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
@@ -109,7 +109,7 @@ Combining different strategies allows to find the best solutions to tackle catas
 </div> 
 
 #### 2. EVALUATE  
-**This section aims at evaluating CL approaches in the context of resource-scarse embedded systems.**   
+**This section aims at evaluating CL approaches in the context of resource-scarse devices.**   
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.  
 Continual learning algorithms learn from a stream of data in a continuous and adaptable manner throughout time, allowing for the progressive development of ever more complicated knowledge and abilities. The lack of agreement in evaluating continuous learning algorithms, as well as the almost exclusive focus on forgetting, make it even more difficult to define a robust evaluation of CL strategies for embedded systems and robotics.
 
