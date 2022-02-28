@@ -1,6 +1,6 @@
 <div align="center">
     
-# Continual Learning for resource-scarce devices
+# Multi-Task Continual Learning for resource-scarce devices
 </div>
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
@@ -48,6 +48,7 @@ Main references                                             | link
 **ContinualAI**                                             | https://course.continualai.org
 **Avalanche library for CL**                                | https://arxiv.org/abs/2104.00405
 Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
+.. LwF for task incremental settings                        | https://arxiv.org/abs/2107.12304
 Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
 -- **Metrics and Evaluation of CL algorithms** --           |  
 Continual Learning in Single-Incremental-Task scenarios     | https://arxiv.org/abs/1806.08568
@@ -74,7 +75,7 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 ***
 
 ## Research objectives and methods
-This thesis contributes to the study of different Continual Learning algorithms, focused on continual supervised learning for vision tasks, that could best suit resource-constrained devices.  
+This thesis contributes to the study of different **Multi-Task Continual Learning algorithms** (reinforcement learning) that could best suit resource-constrained devices.  
 Through the development of some simulated experiments, **the goal** is to better understand the specific configuration needed to achieve optimal results in resource-constrained devices, which means in turn to play with different hyper-parameters and such.
 
 ### Action plan
