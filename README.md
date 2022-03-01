@@ -1,6 +1,6 @@
 <div align="center">
     
-# Multi-Task Continual Learning for resource-scarce devices
+# Class-Incremental Continual Learning approaches for resource-constrained devices
 </div>
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
@@ -75,7 +75,7 @@ Open-source end-to-end library for continual learning based on Pytorch, devised 
 ***
 
 ## Research objectives and methods
-This thesis contributes to the study of different **Multi-Task Continual Learning algorithms** (reinforcement learning) that could best suit resource-constrained devices.  
+This thesis contributes to the study of different **Class-Incremental Continual Learning algorithms** that could best suit resource-constrained devices.  
 Through the development of some simulated experiments, **the goal** is to better understand the specific configuration needed to achieve optimal results in resource-constrained devices, which means in turn to play with different hyper-parameters and such.
 
 ### Action plan
