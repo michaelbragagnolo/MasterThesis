@@ -96,11 +96,11 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
-Regularization  | LwF                               | Split MNIST                      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | N
-Architectural Regularization  | AR1                 | Split CIFAR 100                  | https://arxiv.org/abs/1806.08568                                   | N
-Rehearsal Regularization      | GEM                 | Split CIFAR 10                   | https://arxiv.org/abs/1706.08840                                   | N    
-Rehearsal Regularization      | iCaRL               | Split CIFAR 100                  | https://arxiv.org/abs/1611.07725                                   | N
-Generative Replay             | Replay              | MNIST                            | https://arxiv.org/abs/2108.06758                                   | N
+Regularization  | LwF                               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
+Architectural Regularization  | AR1                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1806.08568                                   | N
+Rehearsal Regularization      | GEM                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1706.08840                                   | N    
+Rehearsal Regularization      | iCaRL               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1611.07725                                   | N
+Generative Replay             | Replay              | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | N
 
 In this survey I set out to identify the main challenges for **class-IL**, where the learner does not have access to the task-ID at inference time, and therefore must be able to distinguish between all classes from all tasks whereas most early methods for incremental learning considered the scenario, known as task-incremental learning (task-IL), in which the algorithm has access to a task-ID at inference time. This has the clear advantage that methods do not have to discriminate between classes coming from different tasks.
 
