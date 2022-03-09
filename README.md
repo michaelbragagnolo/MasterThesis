@@ -97,7 +97,7 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
 Regularization  | LwF                               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
-Architectural Regularization  | AR1                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1806.08568                                   | N
+Architectural Regularization  | AR1                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1806.08568                                   | Y
 Rehearsal Regularization      | GEM                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1706.08840                                   | N    
 Rehearsal Regularization      | iCaRL               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1611.07725                                   | N
 Generative Replay             | Replay              | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | N
