@@ -102,7 +102,7 @@ Combining different strategies allows to find the best solutions to tackle catas
 
 <div align="center">
 
-<img src="VennD_rev2.png" alt="drawing" style="width:500px;"/>
+<img src="VennD_rev2.png" alt="drawing" style="width:700px;"/>
 </div> 
 
 #### 2. EVALUATE  
