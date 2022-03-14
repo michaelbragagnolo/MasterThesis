@@ -1,11 +1,8 @@
 <div align="center">
     
-# Class-Incremental Continual Learning approaches for resource-constrained devices
+# Class-Incremental Continual Learning methods for resource constrained devices
 </div>
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
-
-### Overleaf project
-Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www.overleaf.com/read/cxcxbjznmrxx)
 
 ### Outline
 1. Introduction
@@ -24,13 +21,12 @@ Draft of the final dissertation (ongoing): [Thesis-Overleaf project](https://www
      - Architectural
      - Regularization
      - Rehearsal
-     - Generative Replay
+     - Experience Replay
    - Continual learning benchmarks and protocols
      - LwF
      - AR1
      - GEM
-     - ICARL
-     - Replay  
+     - Experience Replay  
 4. Software environment and experimental application
    - Avalanche library, brief overview
    - Description of the implemented algorithms in Jupyter Notebook
@@ -49,7 +45,6 @@ Main references                                             | link
 **Avalanche library for CL**                                | https://arxiv.org/abs/2104.00405
 Online CL in Image Classification                           | https://arxiv.org/abs/2101.10423
 .. LwF for task incremental settings                        | https://arxiv.org/abs/2107.12304
-Performance of CL for embedded sensing applications         | https://arxiv.org/abs/2110.13290
 -- **Metrics and Evaluation of CL algorithms** --           |  
 Continual Learning in Single-Incremental-Task scenarios     | https://arxiv.org/abs/1806.08568
 Continual Learning for Robotics                             | https://arxiv.org/abs/1907.00182
@@ -97,10 +92,9 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
 Regularization  | LwF                               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
-Architectural Regularization  | AR1                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1806.08568                                   | N
+Architectural Regularization  | AR1                 | Split CIFAR10                    | https://arxiv.org/abs/1806.08568                                   | Y
 Rehearsal Regularization      | GEM                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1706.08840                                   | Y    
-Rehearsal Regularization      | iCaRL               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1611.07725                                   | N
-Generative Replay             | Replay              | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | N
+Experience Replay             | Replay              | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | N
 
 In this survey I set out to identify the main challenges for **class-IL**, where the learner does not have access to the task-ID at inference time, and therefore must be able to distinguish between all classes from all tasks whereas most early methods for incremental learning considered the scenario, known as task-incremental learning (task-IL), in which the algorithm has access to a task-ID at inference time. This has the clear advantage that methods do not have to discriminate between classes coming from different tasks.
 
@@ -122,12 +116,12 @@ The evaluation of those algorithms has to provide insights on whether their solu
 - **BWT (Backward knowledge Transfer) and FWT (Forward knowledge Transfer)**
   - Measure of the influence that learning a task has on the performance on previous and future tasks; defined to account for the dynamics of CL at each timestep.  
 - **Model Size and Samples Storage Size**
-  - MS represents the space occupied by the model, with the idea that it should not grow to rapidly with respect to the size of the model that learned the first task.
+  - MS represents the space occupied by the model, with the idea that it should not grow too rapidly with respect to the size of the model that learned the first task.
   - SSS efficiency establishes a metric for the increment in space required for each new experience.  
 - **Computational efficiency**
   - Computational overhead during training (running time, MACs, CPU time, ..) and inference.
 
-Drawing inspiration from the `Evaluation` module of Avalanche, I evaluate my proposal with five continual learning strategies on the MNIST and CIFAR10/100 continual learning benchmarks.
+Drawing inspiration from the `Evaluation` module of Avalanche, I evaluate my proposal with four continual learning strategies on the MNIST and CIFAR10 continual learning benchmarks.
 
 **Tensorboard** logs all the metrics in real-time; from terminal:  
 - tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
