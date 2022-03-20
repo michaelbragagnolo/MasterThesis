@@ -10,7 +10,7 @@ Repository that is intended to keep track of my thesis work and that contains al
    - Continual Learning
    - Thesis outline and methods
 2. Background and Motivation
-   - Introduction on Artificial Intelligence
+   - An introduction to Artificial Intelligence
    - Artificial Intelligence on embedded systems
    - Machine Learning
    - Tiny Machine Learning
@@ -92,9 +92,9 @@ Benchmarks hereafter are (so far) based on reshaped versions of well-known datas
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
 Regularization  | LwF                               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
-Architectural Regularization  | AR1                 | Split CIFAR10                    | https://arxiv.org/abs/1806.08568                                   | N
+Architectural Regularization  | AR1                 | Split CIFAR10                    | https://arxiv.org/abs/1806.08568                                   | Y, needs improvements
 Rehearsal Regularization      | GEM                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1706.08840                                   | Y    
-Replay                        | Experience Replay   | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | N
+Replay                        | Experience Replay   | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | Y
 
 In this survey I set out to identify the main challenges for **class-IL**, where the learner does not have access to the task-ID at inference time, and therefore must be able to distinguish between all classes from all tasks whereas most early methods for incremental learning considered the scenario, known as task-incremental learning (task-IL), in which the algorithm has access to a task-ID at inference time. This has the clear advantage that methods do not have to discriminate between classes coming from different tasks.
 
