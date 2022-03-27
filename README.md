@@ -118,7 +118,7 @@ The evaluation of those algorithms has to provide insights on whether their solu
 - **Confusion Matrix**
   - Confusion matrix relative to all the patterns seen during evaluation.
 <div align="aligned">
-<img src="ConfusionMatrix.png" alt="drawing" style="width:400px;"/>
+<img src="ConfusionMatrix.png" alt="drawing" style="width:300px;"/>
 </div>
 
 - **Model Size and Samples Storage Size**
