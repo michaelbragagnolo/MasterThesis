@@ -111,10 +111,15 @@ Given the fact that embedded systems are built for specific purposes and are opt
 Continual learning algorithms learn from a stream of data in a continuous and adaptable manner throughout time, allowing for the progressive development of ever more complicated knowledge and abilities. The lack of agreement in evaluating continuous learning algorithms, as well as the almost exclusive focus on forgetting, make it even more difficult to define a robust evaluation of CL strategies for embedded systems and robotics.
 
 The evaluation of those algorithms has to provide insights on whether their solutions may help continual learning in the context of resource-scarse devices. It is not enough to observe good final accuracy on an algorithm to know if it's transferable to embedded settings, but additional metrics have to be taken into account for it to suffice. In this context, I propose a more **comprehensive set of implementation independent metrics** accounting for several factors I believe have practical implications worth considering in the deployment of real AI systems that learn continually:
-- **Accuracy or Performance over time**
+- **Accuracy ans Loss**
   - Average accuracy accounting for performance at every timestep in time    
 - **BWT (Backward knowledge Transfer) and FWT (Forward knowledge Transfer)**
-  - Measure of the influence that learning a task has on the performance on previous and future tasks; defined to account for the dynamics of CL at each timestep.  
+  - Measure of the influence that learning a task has on the performance on previous and future tasks; defined to account for the dynamics of CL at each timestep.
+- **Confusion Matrix**
+  - Confusion matrix relative to all the patterns seen during evaluation.
+<div align="aligned">
+<img src="ConfusionMatrix.png" alt="drawing" style="width:400px;"/>
+</div> 
 - **Model Size and Samples Storage Size**
   - MS represents the space occupied by the model, with the idea that it should not grow too rapidly with respect to the size of the model that learned the first task.
   - SSS efficiency establishes a metric for the increment in space required for each new experience.  
@@ -124,7 +129,7 @@ The evaluation of those algorithms has to provide insights on whether their solu
 Drawing inspiration from the `Evaluation` module of Avalanche, I evaluate my proposal with four continual learning strategies on the MNIST and CIFAR10 continual learning benchmarks.
 
 **Tensorboard** logs all the metrics in real-time; from terminal:  
-- tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Sttegies/tb_data  
+- tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Strategies/tb_data  
 - localhost http://localhost:6006
 
 #### 3. LOG and DISPLAY RESULT
