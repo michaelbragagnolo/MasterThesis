@@ -119,7 +119,8 @@ The evaluation of those algorithms has to provide insights on whether their solu
   - Confusion matrix relative to all the patterns seen during evaluation.
 <div align="aligned">
 <img src="ConfusionMatrix.png" alt="drawing" style="width:400px;"/>
-</div> 
+</div>
+
 - **Model Size and Samples Storage Size**
   - MS represents the space occupied by the model, with the idea that it should not grow too rapidly with respect to the size of the model that learned the first task.
   - SSS efficiency establishes a metric for the increment in space required for each new experience.  
