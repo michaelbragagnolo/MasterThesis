@@ -5,14 +5,14 @@
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
 ### Outline
-1. Introduction
-   - Machine Learning: the good and bad
-   - Continual Learning
-   - Thesis outline and methods
-2. Background and Motivation
+Introduction
+1. Background and Motivation
+   - Limits and Potentials of Machine Learning
+   - Adaptive AI with Continual Learning
+   - Thesis Outline and Methods
+2. Artificial Intelligence and Embedded Machine Learning
    - An introduction to Artificial Intelligence
-   - Artificial Intelligence on embedded systems
-   - Machine Learning
+   - Workflow of a Machine Learning project
    - Tiny Machine Learning
    - Motivation
 3. Continual Learning
