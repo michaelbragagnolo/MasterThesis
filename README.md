@@ -16,24 +16,22 @@ Introduction
    - Tiny Machine Learning
    - Motivation
 3. Continual Learning
-   - Introductive framework for Continual Learning
-   - Continual learning approaches for efficient ML
+   - Framework and Desiderata
+   - Neural Network Approaches
      - Architectural
+       - AR1
      - Regularization
+       - LwF 
      - Rehearsal
-     - Experience Replay
-   - Continual learning benchmarks and protocols
-     - LwF
-     - AR1
-     - GEM
-     - Experience Replay  
-4. Software environment and experimental application
-   - Avalanche library, brief overview
-   - Description of the implemented algorithms in Jupyter Notebook
-   - Metrics of evaluation
-5. Results and comparison by selected algorithm
+       - GEM 
+     - Memory Replay
+       - Replay 
+4. Experiments
+   - Experimental Setup
+   - Evaluation
+5. Results
    - LOG and Display of the results
-7. Conclusion and future challenges
+7. Conclusion and Future Research Directions
 
 
 ### Description
@@ -94,7 +92,7 @@ CL Approach     |    Technique                      | Benchmark                 
 Regularization  | LwF                               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
 Architectural Regularization  | AR1                 | Split CIFAR10                    | https://arxiv.org/abs/1806.08568                                   | Y, needs improvements
 Rehearsal Regularization      | GEM                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1706.08840                                   | Y    
-Replay                        | Experience Replay   | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | Y
+Replay                        | Memory Replay       | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | Y
 
 In this survey I set out to identify the main challenges for **class-IL**, where the learner does not have access to the task-ID at inference time, and therefore must be able to distinguish between all classes from all tasks whereas most early methods for incremental learning considered the scenario, known as task-incremental learning (task-IL), in which the algorithm has access to a task-ID at inference time. This has the clear advantage that methods do not have to discriminate between classes coming from different tasks.
 
