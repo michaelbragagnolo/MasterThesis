@@ -1,6 +1,6 @@
 <div align="center">
     
-# Class-Incremental Continual Learning methods for resource constrained devices
+# Class-Incremental Continual Learning: survey and performance evalution relative to resource-constrained devices
 </div>
 Repository that is intended to keep track of my thesis work and that contains all the reference material and the scripts developed to this end.
 
@@ -85,14 +85,15 @@ Here I propose a list of experiments based on some of the most popular, yet inte
 
 In order to improve its performance or expand its set of capabilities, the target system powered by a continual learning strategy is required to learn from a non-stationary stream of experiences.  
 The `benchmarks` are recipes that specify how this stream of data is created by defining the originating dataset and the contents of the stream.  
-Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and CIFAR-100.
+Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and FashionMNIST.
 
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
 ----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
-Regularization  | LwF                               | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
-Architectural Regularization  | AR1                 | Split CIFAR10                    | https://arxiv.org/abs/1806.08568                                   | Y, needs improvements
-Rehearsal Regularization      | GEM                 | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/1706.08840                                   | Y    
-Replay                        | Memory Replay       | Split MNIST / Split CIFAR10      | https://arxiv.org/abs/2108.06758                                   | Y
+Regularization  | LwF                               | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
+Architectural Regularization  | AR1                 | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1806.08568
+https://github.com/GMvandeVen/class-incremental-learning| Y
+Rehearsal Regularization      | GEM                 | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1706.08840                                   | Y    
+Replay                        | Memory Replay       | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/2108.06758                                   | Y
 
 In this survey I set out to identify the main challenges for **class-IL**, where the learner does not have access to the task-ID at inference time, and therefore must be able to distinguish between all classes from all tasks whereas most early methods for incremental learning considered the scenario, known as task-incremental learning (task-IL), in which the algorithm has access to a task-ID at inference time. This has the clear advantage that methods do not have to discriminate between classes coming from different tasks.
 
@@ -108,24 +109,21 @@ Combining different strategies allows to find the best solutions to tackle catas
 Given the fact that embedded systems are built for specific purposes and are optimized to meet different kind of constraints, such as memory, timing, power and cost, the performance of each Continual Learning algorithm are to be evaluated by monitoring several aspects of the computation.  
 Continual learning algorithms learn from a stream of data in a continuous and adaptable manner throughout time, allowing for the progressive development of ever more complicated knowledge and abilities. The lack of agreement in evaluating continuous learning algorithms, as well as the almost exclusive focus on forgetting, make it even more difficult to define a robust evaluation of CL strategies for embedded systems and robotics.
 
-The evaluation of those algorithms has to provide insights on whether their solutions may help continual learning in the context of resource-scarse devices. It is not enough to observe good final accuracy on an algorithm to know if it's transferable to embedded settings, but additional metrics have to be taken into account for it to suffice. In this context, I propose a more **comprehensive set of implementation independent metrics** accounting for several factors I believe have practical implications worth considering in the deployment of real AI systems that learn continually:
-- **Accuracy ans Loss**
-  - Average accuracy accounting for performance at every timestep in time    
-- **BWT (Backward knowledge Transfer) and FWT (Forward knowledge Transfer)**
-  - Measure of the influence that learning a task has on the performance on previous and future tasks; defined to account for the dynamics of CL at each timestep.
-- **Confusion Matrix**
+The evaluation of those algorithms has to provide insights on whether their solutions may help continual learning in the context of resource-scarse devices. It is not enough to observe good final accuracy on an algorithm to know if it's transferable to embedded settings, but additional metrics have to be taken into account for it to suffice. In this context, results were compared accounting for several factors I believe have practical implications worth considering in the deployment of real AI systems that learn continually:
+- **Catastrophic Forgetting**
+  - Average accuracy only for experiences that the model has been trained on;
+  - How stream lenght affects forgetting;
+  - Replay with diverse ratio of new examples to replay examples.   
+- **Storage, Latency and Memory footprint**
+  - Overall storage overhead for each strategy;
+  - Mean training and class-incremental learning time.
+- **Confusion Matrices**
   - Confusion matrix relative to all the patterns seen during evaluation.
 <div align="aligned">
 <img src="ConfusionMatrix.png" alt="drawing" style="width:300px;"/>
 </div>
 
-- **Model Size and Samples Storage Size**
-  - MS represents the space occupied by the model, with the idea that it should not grow too rapidly with respect to the size of the model that learned the first task.
-  - SSS efficiency establishes a metric for the increment in space required for each new experience.  
-- **Computational efficiency**
-  - Computational overhead during training (running time, MACs, CPU time, ..) and inference.
-
-Drawing inspiration from the `Evaluation` module of Avalanche, I evaluate my proposal with four continual learning strategies on the MNIST and CIFAR10 continual learning benchmarks.
+Drawing inspiration from the `Evaluation` module of Avalanche, I evaluate my proposal with four continual learning strategies on the MNIST and FashionMNIST continual learning benchmarks.
 
 **Tensorboard** logs all the metrics in real-time; from terminal:  
 - tensorboard --logdir /Users/MichaelB/TesiLM-ContinualAI_Avalanche/Strategies/tb_data  
@@ -137,6 +135,6 @@ The `Logging` module of Avalanche is used to display each plugin metric during t
 
 #### 4. CONCLUSION
 On-device training is subject to many real world constraints, strict computational and memory limitations.  
-In this thesis work, I want to show that a proper fine-tuned continual learning strategy can provide an efficient and effective approach for sustainable on-device personalization while controlling forgetting on previously acquired knowledge.
+In this thesis work, I want to show that a proper fine-tuned continual learning strategy can provide an efficient and effective approach for sustainable on-device personalization while controlling forgetting on previously acquired knowledge. The important challenge for Continual Learning is not necessarily finding solutions that work in the real world but rather finding stable algorithms that can learn in real world.
 
 In future evaluation scenarios, particularly in resource-constrained devices, stability is another important property that should be evaluated since in many tasks, potential abrupt performance drifts would be a major concern when learning continuosly.
