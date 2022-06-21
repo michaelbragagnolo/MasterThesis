@@ -88,10 +88,9 @@ The `benchmarks` are recipes that specify how this stream of data is created by 
 Benchmarks hereafter are (so far) based on reshaped versions of well-known datasets such as MNIST and FashionMNIST.
 
 CL Approach     |    Technique                      | Benchmark                        | Resources        | Implemented  [Y/N]             
-----------------|-----------------------------------|----------------------------------|------------------|----------------------------------------------------
+----------------|-----------------------------------|----------------------------------|------------------|-----------------------------------------------
 Regularization  | LwF                               | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1606.09282  https://arxiv.org/abs/1904.07734 | Y
-Architectural Regularization  | AR1                 | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1806.08568
-https://github.com/GMvandeVen/class-incremental-learning| Y
+Architectural Regularization  | AR1                 | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1806.08568 https://github.com/GMvandeVen/class-incremental-learnin | Y
 Rehearsal Regularization      | GEM                 | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/1706.08840                                   | Y    
 Replay                        | Memory Replay       | Split MNIST / Split FashionMNIST      | https://arxiv.org/abs/2108.06758                                   | Y
 
